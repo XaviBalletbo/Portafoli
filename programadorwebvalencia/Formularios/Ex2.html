@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercici2</title>
+</head>
+<body>
+    <h1>Formulari de Venda d'Altaveus</h1>
+    
+        
+        <label for="model">Model:</label>
+        <select id="model" name="model" required>
+            <option value="R4">R4</option>
+            <option value="R5">R5</option>
+            <option value="SR1">SR1</option>
+        </select>
+        <br><br>
+
+        
+        <label for="potencia">Potència màxima (50-100 W):</label>
+        <input type="number" id="potencia" name="potencia" min="50" max="100" required>
+        <br><br>
+
+        
+        <label>Bluetooth:</label>
+        <input type="radio" id="bluetooth_si" name="bluetooth" value="si" required>
+        <label for="bluetooth_si">Sí</label>
+        <input type="radio" id="bluetooth_no" name="bluetooth" value="no">
+        <label for="bluetooth_no">No</label>
+        <br><br>
+
+        
+        <label for="color">Color:</label>
+        <input type="color" id="color" name="color" value="#000000">
+        <br><br>
+
+        
+        <button type="submit">Enviar</button>
+    
+</body>
+</html>

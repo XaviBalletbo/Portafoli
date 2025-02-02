@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercici4</title>
+</head>
+<body>
+    <h1>Cercador de Càmeres de Fotos</h1>
+    
+        <label for="tipus">Tipus de càmera:</label>
+        <select id="tipus" name="tipus" required>
+            <option value="compacta">Compacta</option>
+            <option value="reflex">Reflex (DSLR)</option>
+            <option value="mirrorless">Mirrorless</option>
+            <option value="action">Action Cams</option>
+        </select>
+        <br><br>
+
+        
+        <label for="marca">Marca:</label>
+        <input type="text" id="marca" name="marca" placeholder="Ex: Canon, Nikon, Sony">
+        <br><br>
+
+        
+        <label for="preu_min">Preu mínim:</label>
+        <input type="number" id="preu_min" name="preu_min" min="0" placeholder="€">
+        <br><br>
+        <label for="preu_max">Preu màxim:</label>
+        <input type="number" id="preu_max" name="preu_max" min="0" placeholder="€">
+        <br><br>
+
+        
+        <label for="resolucio">Resolució mínima (MP):</label>
+        <input type="number" id="resolucio" name="resolucio" min="0" placeholder="Megapíxels">
+        <br><br>
+
+        
+        <label>Característiques especials:</label>
+        <input type="checkbox" id="wifi" name="wifi">
+        <label for="wifi">Wi-Fi</label>
+        <input type="checkbox" id="gps" name="gps">
+        <label for="gps">GPS</label>
+        <input type="checkbox" id="4k" name="4k">
+        <label for="4k">Gravar en 4K</label>
+        <input type="checkbox" id="estabilitzacio" name="estabilitzacio">
+        <label for="estabilitzacio">Estabilització d'imatge</label>
+        <br><br>
+
+       
+        <button type="submit">Enviar</button>
+    
+</body>
+</html>
