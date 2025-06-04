@@ -1,0 +1,318 @@
+/* Estilos generales */
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #2c3e50;
+    --accent-color: #e74c3c;
+    --light-color: #ecf0f1;
+    --dark-color: #2c3e50;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--dark-color);
+    background-color: #f5f7fa;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+header {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 20px 0;
+    box-shadow: var(--shadow);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+nav ul li a:hover {
+    color: var(--primary-color);
+}
+
+/* Main content */
+main {
+    padding: 40px 0;
+}
+
+.intro {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.intro h2 {
+    font-size: 2rem;
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.intro p {
+    font-size: 1.1rem;
+    color: #666;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Acordeón */
+.accordion {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.accordion-item {
+    margin-bottom: 15px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    background-color: white;
+}
+
+.accordion-button {
+    width: 100%;
+    padding: 15px 20px;
+    text-align: left;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: 500;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: var(--transition);
+}
+
+.accordion-button:hover {
+    background-color: #2980b9;
+}
+
+.accordion-button i:first-child {
+    margin-right: 10px;
+}
+
+.accordion-button .fa-chevron-down {
+    transition: transform 0.3s ease;
+}
+
+.accordion-button.active .fa-chevron-down {
+    transform: rotate(180deg);
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 20px;
+}
+
+.accordion-content.active {
+    max-height: 500px;
+    padding: 20px;
+}
+
+.accordion-content a {
+    display: flex;
+    align-items: center;
+    background-color: var(--light-color);
+    color: var(--dark-color);
+    padding: 10px 15px;
+    margin: 5px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: var(--transition);
+    font-size: 0.95rem;
+    flex: 1 1 calc(50% - 10px);
+    min-width: 200px;
+}
+
+.accordion-content a:hover {
+    background-color: var(--primary-color);
+    color: white;
+    transform: translateY(-2px);
+}
+
+.accordion-content a i {
+    margin-right: 8px;
+}
+
+/* Footer */
+footer {
+    background-color: var(--secondary-color);
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+footer p {
+    font-size: 0.9rem;
+}
+
+/* Estils per a la nova estructura de Sobre Mi */
+.contact-info {
+    margin: 15px 0;
+}
+
+.contact-info p {
+    margin: 8px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--dark-color);
+}
+
+.experience-list {
+    list-style: none;
+    margin-bottom: 25px;
+}
+
+.experience-list li {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.experience-list li strong {
+    display: block;
+    color: var(--secondary-color);
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+.experience-list li span {
+    display: block;
+    color: #666;
+    font-size: 0.95rem;
+    margin: 3px 0;
+}
+
+.skills-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 25px;
+}
+
+.skills-section > div {
+    flex: 1;
+    min-width: 250px;
+}
+
+.skills-section h4 {
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+.soft-skills .skills span {
+    background-color: #e3f2fd;
+    color: var(--secondary-color);
+}
+
+.tech-skills .skills span {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.languages p {
+    margin: 10px 0;
+    padding-left: 10px;
+    border-left: 3px solid var(--primary-color);
+}
+
+.certificates-list {
+    list-style: none;
+    margin-bottom: 25px;
+}
+
+.certificates-list li {
+    margin-bottom: 10px;
+    padding-left: 25px;
+    position: relative;
+}
+.profile-img {
+    width: 150px;
+    height: auto;
+    border-radius: 50%;
+}
+
+
+.certificates-list li:before {
+    content: "✓";
+    color: var(--primary-color);
+    position: absolute;
+    left: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        margin-top: 15px;
+        justify-content: center;
+    }
+
+    nav ul li {
+        margin: 0 10px;
+    }
+
+    .accordion-content a {
+        flex: 1 1 100%;
+    }
+}
